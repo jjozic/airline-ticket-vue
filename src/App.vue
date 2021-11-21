@@ -3,12 +3,7 @@
     <h1>Airline Ticket Updater</h1>
     <div class="wrapper">
       <UiUpdater />
-      <AirlineTicket
-        bgColor="lightblue"
-        fontSize=12
-        fontColor="gold"
-        passengerName=store.state.passengerName
-      />
+      <AirlineTicket />
     </div>
   </div>
 </template>
@@ -37,5 +32,7 @@ export default {
 
 .wrapper {
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 </style>

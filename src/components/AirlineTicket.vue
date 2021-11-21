@@ -40,28 +40,29 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'AirlineTicket',
-  props: {
-    bgColor: String,
-    fontSize: Number,
-    fontColor: String,
-    passengerName: String,
-  },
   computed: {
     cssVars() {
       return {
-        /* variables you want to pass to css */
         '--bgColor': this.bgColor,
         '--fontSize': `${this.fontSize}px`,
         '--fontColor': this.fontColor,
       };
     },
+    ...mapState([
+      'bgColor',
+      'fontSize',
+      'fontColor',
+      'passengerName',
+    ]),
   },
 };
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 $topbg: var(--bgColor);
 $bottombg: #fff;
