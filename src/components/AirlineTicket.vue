@@ -63,7 +63,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-$container: #e0e2e8;
 $topbg: var(--bgColor);
 $bottombg: #fff;
 $font: "Open Sans", sans-serif;
@@ -78,15 +77,9 @@ h1 {
 }
 
 .container {
-  background: var(--container);
   position: relative;
-  width: 100%;
-  height: 100vh;
   .ticket {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
   .basic {
     display: none;

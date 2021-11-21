@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <AirlineTicket
-      bgColor="lightblue"
-      fontSize=12
-      fontColor="gold"
-      passengerName="Max Mustermann"
-    />
+    <h1>Airline Ticket Updater</h1>
+    <div class="wrapper">
+      <UiUpdater />
+      <AirlineTicket
+        bgColor="lightblue"
+        fontSize=12
+        fontColor="gold"
+        passengerName=store.state.passengerName
+      />
+    </div>
   </div>
 </template>
 
 <script>
 import AirlineTicket from './components/AirlineTicket.vue';
+import UiUpdater from './components/UiUpdater.vue';
 
 export default {
   name: 'App',
   components: {
-    AirlineTicket,
+    AirlineTicket, UiUpdater,
   },
 };
 </script>
@@ -28,5 +33,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.wrapper {
+  display: flex;
 }
 </style>
