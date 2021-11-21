@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <AirlineTicket
+      bgColor="lightblue"
+      fontSize=12
+      fontColor="gold"
+      passengerName="Max Mustermann"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import AirlineTicket from './components/AirlineTicket.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    AirlineTicket,
   },
 };
 </script>
